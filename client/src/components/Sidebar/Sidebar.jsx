@@ -1,4 +1,4 @@
-import Conversation from './Conversation/Conversation';
+import Conversations from './Conversation/Conversations';
 import LogoutButton from './Logout/Logout';
 import SearchInput from './SearchInput/SearchInput';
 
@@ -7,7 +7,7 @@ const Sidebar = () => {
     <div className="border-r border-slate-500 p-4 flex flex-col">
       <SearchInput />
       <div className="divider px-3"></div>
-      <Conversation />
+      <Conversations />
       <LogoutButton />
     </div>
   );

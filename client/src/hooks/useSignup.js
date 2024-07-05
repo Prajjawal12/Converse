@@ -40,7 +40,6 @@ const useSignup = () => {
       });
 
       const data = await res.json();
-      console.log('API response:', data); // Debug log
 
       if (data.error) {
         throw new Error(data.error);
@@ -59,7 +58,6 @@ const useSignup = () => {
   return { loading, signup };
 };
 
-// Utility function to handle input validation
 function handleInputErrors({
   fullName,
   username,
