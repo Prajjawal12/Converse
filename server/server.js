@@ -12,15 +12,7 @@ import connectToMongoDB from './db/connectToMongoDB.js';
 const __dirname = path.resolve();
 dotenv.config();
 const PORT = process.env.PORT || 8000;
-const io = new Server(server, {
-  cors: {
-    origin: 'https://converse-chat-app.onrender.com/',
-    methods: ['GET', 'POST'],
-    credentials: true,
-    transports: ['websocket', 'polling'],
-    allowEIO3: true,
-  },
-});
+app.use(cors());
 
 app.use(express.json()); // to parse the incoming requests with JSON payloads (from req.body)
 app.use(cookieParser());
